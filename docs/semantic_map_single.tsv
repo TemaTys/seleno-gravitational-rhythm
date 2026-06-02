@@ -1,0 +1,127 @@
+signal_key	db_name	code	emoji	family_en	label_en	family_ru	label_ru
+EMS_SINGLE_CARD	NYC_EMS	CARD	❤️	Cardiology	Cardiac arrest	Кардиология	Остановка сердца
+EMS_SINGLE_CARDBR	NYC_EMS	CARDBR	❤️	Cardiology	Cardiac / respiratory emergency	Кардиология	Кардиореспираторная экстренная ситуация
+EMS_SINGLE_ARREST	NYC_EMS	ARREST	❤️	Cardiology	Cardiac arrest	Кардиология	Остановка сердца
+EMS_SINGLE_HYPTN	NYC_EMS	HYPTN	💓	Vascular	Hypertensive crisis	Сосуды	Гипертонический криз
+EMS_SINGLE_ASTHMB	NYC_EMS	ASTHMB	🫁	Respiratory	Asthma (breathing difficulty)	Дыхание	Астма (затруднённое дыхание)
+EMS_SINGLE_RESPIR	NYC_EMS	RESPIR	🫁	Respiratory	Breathing difficulty	Дыхание	Затруднённое дыхание
+EMS_SINGLE_DIFFBR	NYC_EMS	DIFFBR	🧬	Neurology	Breathing difficulty (neurological)	Неврология	Затруднённое дыхание (неврология)
+EMS_SINGLE_INHALE	NYC_EMS	INHALE	🫁	Respiratory	Toxic inhalation	Дыхание	Вдыхание токсинов
+EMS_SINGLE_CVA	NYC_EMS	CVA	🧬	Neurology	Stroke	Неврология	Инсульт
+EMS_SINGLE_CVAC	NYC_EMS	CVAC	🧬	Neurology	Confirmed stroke	Неврология	Подтверждённый инсульт
+EMS_SINGLE_SEIZR	NYC_EMS	SEIZR	⚡	Seizures	Reported seizure	Судороги	Сообщение о судорогах
+EMS_SINGLE_STATEP	NYC_EMS	STATEP	⚡	Seizures	Status epilepticus	Судороги	Эпилептический статус
+EMS_SINGLE_EDP	NYC_EMS	EDP	🧠	Psychiatry	Emotionally disturbed person	Психиатрия	Эмоционально дестабилизированный человек
+EMS_SINGLE_ALTMEN	NYC_EMS	ALTMEN	🧠	Psychiatry	Altered mental status	Психиатрия	Изменённое психическое состояние
+EMS_SINGLE_PD13	NYC_EMS	PD13	🩸	Endocrinology	Diabetic emergency	Эндокринология	Диабетическое неотложное состояние
+EMS_SINGLE_JUMPUP	NYC_EMS	JUMPUP	⚠️	Suicide	Threat of jumping	Суицид	Угроза прыжка
+EMS_SINGLE_JUMPDN	NYC_EMS	JUMPDN	⚠️	Suicide	Jump (fall)	Суицид	Прыжок (падение)
+EMS_SINGLE_DRUG	NYC_EMS	DRUG	💊	Narcotics	Overdose	Наркотики	Передозировка
+EMS_SINGLE_UNC	NYC_EMS	UNC	😵	Consciousness	Unconscious	Потеря сознания	Потеря сознания
+EMS_SINGLE_STAB	NYC_EMS	STAB	🔪	Violence	Stabbing	Насилие	Ножевое ранение
+EMS_SINGLE_SHOT	NYC_EMS	SHOT	🔪	Violence	Gunshot wound	Насилие	Огнестрельное ранение
+EMS_SINGLE_MVAINJ	NYC_EMS	MVAINJ	🩹	Trauma	Motor vehicle accident with injuries	Травмы	ДТП с пострадавшими
+EMS_SINGLE_INJMAJ	NYC_EMS	INJMAJ	🩹	Trauma	Major injury	Травмы	Серьёзная травма
+EMS_SINGLE_ABDPN	NYC_EMS	ABDPN	🫀	Abdomen	Abdominal pain	Живот	Боль в животе
+EMS_SINGLE_ANAPH	NYC_EMS	ANAPH	🌿	Allergy	Anaphylaxis	Аллергия	Анафилаксия
+EMS_SINGLE_OBLAB	NYC_EMS	OBLAB	🤱	Obstetrics	Active labor	Акушерство	Роды
+EMS_SINGLE_OBMAJ	NYC_EMS	OBMAJ	🤱	Obstetrics	Major obstetric emergency	Акушерство	Акушерство серьёзное
+EMS_SINGLE_OBCOMP	NYC_EMS	OBCOMP	🤱	Obstetrics	Obstetric complications	Акушерство	Осложнения
+EMS_SINGLE_HEAT	NYC_EMS	HEAT	🌡️	Environment	Heat stroke	Среда	Тепловой удар
+EMS_SINGLE_COLD	NYC_EMS	COLD	🌡️	Environment	Hypothermia	Среда	Гипотермия
+EMS_SINGLE_DROWN	NYC_EMS	DROWN	🌡️	Environment	Drowning	Среда	Утопление
+EMS_SINGLE_INBLED	NYC_EMS	INBLED	🩸	Bleeding	Internal (GI) bleeding	Кровотечение	Внутреннее (ЖКТ) кровотечение
+EMS_SINGLE_GYNHEM	NYC_EMS	GYNHEM	🩸	Gynecology	Severe hemorrhage (non-pregnant)	Гинекология	Сильное кровотечение (не беременность)
+EMS_SINGLE_OBMIS	NYC_EMS	OBMIS	🤱	Obstetrics	Threatened miscarriage (<24 weeks)	Акушерство	Угроза выкидыша (<24 недель)
+EMS_SINGLE_PEDSTR	NYC_EMS	PEDSTR	🚗	Traffic	Pedestrian struck by vehicle	ДТП	Пешеход сбит автомобилем
+EMS_SINGLE_MCI21P	NYC_EMS	MCI21P	⚠️	Emergency	Mass casualty incident (many victims)	ЧС	Массовое происшествие (много пострадавших)
+CALLS_SINGLE_EDP_INSIDE	NYC_911	AMBULANCE CASE: EDP/INSIDE	🧠	Psychiatry 911	Emotionally disturbed person inside	Психиатрия 911	Эмоционально дестабилизированный человек внутри помещения
+CALLS_SINGLE_EDP_OUTSIDE	NYC_911	AMBULANCE CASE: EDP/OUTSIDE	🧠	Psychiatry 911	Emotionally disturbed person outside	Психиатрия 911	Эмоционально дестабилизированный человек на улице
+CALLS_SINGLE_EDP_TRANSIT	NYC_911	AMBULANCE CASE: EDP/TRANSIT	🧠	Psychiatry 911	Emotionally disturbed person in transit	Психиатрия 911	Эмоционально дестабилизированный человек в транспорте
+CALLS_SINGLE_ASSAULT_FAMILY	NYC_911	ASSAULT (IN PROGRESS): OTHER/FAMILY	🔪	Aggression 911	Domestic violence (in progress)	Агрессия 911	Насилие в семье (в процессе)
+CALLS_SINGLE_ASSAULT_OUTSIDE	NYC_911	ASSAULT (IN PROGRESS): OTHER/OUTSIDE	🔪	Aggression 911	Assault outside (in progress)	Агрессия 911	Насилие на улице (в процессе)
+CALLS_SINGLE_ASSAULT_INSIDE	NYC_911	ASSAULT (IN PROGRESS): OTHER/INSIDE	🔪	Aggression 911	Assault inside (in progress)	Агрессия 911	Насилие в помещении (в процессе)
+CALLS_SINGLE_DISORDERLY_PERSON_OUT	NYC_911	DISORDERLY: PERSON/OUTSIDE	🍻	Disorderly 911	Disorderly person (outside)	Беспорядки 911	Нарушитель порядка (улица)
+CALLS_SINGLE_DISORDERLY_GROUP_OUT	NYC_911	DISORDERLY: GROUP/OUTSIDE	🍻	Disorderly 911	Disorderly group (outside)	Беспорядки 911	Толпа нарушителей (улица)
+CALLS_SINGLE_DISPUTE_FAMILY	NYC_911	DISPUTE: FAMILY	🤬	Conflicts 911	Family dispute	Конфликты 911	Семейная ссора
+CALLS_SINGLE_ROBBERY_OUTSIDE	NYC_911	ROBBERY (IN PROGRESS): OTHER/OUTSIDE	🥷	Robbery 911	Robbery outside (in progress)	Ограбление 911	Ограбление на улице (в процессе)
+CALLS_SINGLE_ROBBERY_COMMERCIAL	NYC_911	ROBBERY (IN PROGRESS): COMMERCIAL	🥷	Robbery 911	Commercial robbery (in progress)	Ограбление 911	Ограбление магазина (в процессе)
+CALLS_SINGLE_NARCO_OUTSIDE	NYC_911	INVESTIGATE/POSSIBLE CRIME: NARCO SALES/OUTSIDE	💊	Narcotics 911	Narcotics sales (outside)	Наркотики 911	Продажа наркотиков (улица)
+CALLS_SINGLE_NARCO_INSIDE	NYC_911	INVESTIGATE/POSSIBLE CRIME: NARCO SALES/INSIDE	💊	Narcotics 911	Narcotics sales (inside)	Наркотики 911	Продажа наркотиков (дом)
+CALLS_SINGLE_CARDIAC_INSIDE	NYC_911	AMBULANCE CASE: CARDIAC/INSIDE	❤️	Cardiology 911	Cardiac arrest inside (911)	Кардиология 911	Остановка сердца внутри (911)
+CALLS_SINGLE_CARDIAC_OUTSIDE	NYC_911	AMBULANCE CASE: CARDIAC/OUTSIDE	❤️	Cardiology 911	Cardiac arrest outside	Кардиология 911	Остановка сердца на улице
+CALLS_SINGLE_AMBULANCE_SERIOUS_TRANSIT	NYC_911	AMBULANCE CASE: SERIOUS/TRANSIT	🚑	Ambulance 911	Serious incident (subway/transit)	Скорая 911	Серьезный инцидент (Метро/Транспорт)
+CALLS_SINGLE_ASSAULT_WEAPON_INSIDE	NYC_911	ASSAULT (IN PROGRESS): WEAPON/INSIDE	🔪	Aggression 911	Assault with weapon inside (in progress)	Агрессия 911	Насилие с оружием внутри (в процессе)
+CALLS_SINGLE_DISPUTE_KNIFE_OUTSIDE	NYC_911	DISPUTE: KNIFE/OUTSIDE	🤬	Conflicts 911	Dispute with knife outside	Конфликты 911	Ссора с ножом на улице
+CALLS_SINGLE_OTHER_CRIMES_INSIDE	NYC_911	OTHER CRIMES (IN PROGRESS): OTHER/INSIDE	🚨	Crimes 911	Other crime inside (in progress)	Преступления 911	Иное преступление внутри (в процессе)
+CALLS_SINGLE_ALARM_RESIDENTIAL_HOLDUP	NYC_911	ALARMS: RESIDENTIAL/ HOLDUP	🚨	Alarms 911	Residential holdup / alarm	Сигнализация 911	Вторжение / Кнопка тревоги в доме
+CALLS_SINGLE_INVESTIGATE_SERIOUS_TRANSIT	NYC_911	INVESTIGATE/POSSIBLE CRIME: SERIOUS OTHER/TRANSIT	🕵️	Investigation 911	Serious incident (subway/transit)	Расследование 911	Серьезный инцидент (Метро/Транспорт)
+CALLS_SINGLE_SUSP_PACKAGE_TRANSIT	NYC_911	SUSP PACKAGE: TRANSIT	💣	Threat 911	Suspicious package (subway/transit)	Угроза 911	Подозрительный предмет (Метро/Транспорт)
+CALLS_SINGLE_MVA_HIT_BY_AUTO	NYC_911	VEHICLE ACCIDENT: HIT BY AUTO	🚗	Traffic 911	Pedestrian hit by auto	ДТП 911	Сбит пешеход
+CALLS_SINGLE_MVA_HWY	NYC_911	VEHICLE ACCIDENT: OTHER/LTD ACC HWY	🚗	Traffic 911	Accident on highway	ДТП 911	Авария на скоростной трассе
+CALLS_SINGLE_LARCENY_OUTSIDE_PAST	NYC_911	LARCENY (PAST): OTHER/OUTSIDE	🕵️	Larceny 911	Street larceny (past)	Кража 911	Уличная кража (постфактум)
+CALLS_SINGLE_LARCENY_INSIDE_PAST	NYC_911	LARCENY (PAST): OTHER/INSIDE	🕵️	Larceny 911	Larceny inside (past)	Кража 911	Кража в помещении (постфактум)
+CALLS_SINGLE_ROBBERY_INSIDE_PAST	NYC_911	ROBBERY (PAST): OTHER/INSIDE	🥷	Robbery 911	Robbery inside (past)	Ограбление 911	Ограбление внутри (постфактум)
+CALLS_SINGLE_BURGLARY_RESIDENCE_PROG	NYC_911	BURGLARY (IN PROGRESS): RESIDENCE	🥷	Burglary 911	Residential burglary (in progress)	Взлом 911	Взлом квартиры (в процессе)
+CALLS_SINGLE_HARASSMENT_INSIDE_PAST	NYC_911	OTHER CRIMES (PAST): HARASSMENT/INSIDE	🤬	Conflicts 911	Harassment inside	Конфликты 911	Домогательство/Преследование внутри
+CALLS_SINGLE_OTHER_CRIMES_OUTSIDE_PAST	NYC_911	OTHER CRIMES (PAST): OTHER/OUTSIDE	🚨	Crimes 911	Other crime outside (past)	Преступления 911	Иное преступление на улице (постфактум)
+CALLS_SINGLE_INVESTIGATE_FIREARM_OUTSIDE	NYC_911	INVESTIGATE/POSSIBLE CRIME: FIREARM/OUTSIDE	🔫	Firearms 911	Person with firearm outside	Оружие 911	Человек с пистолетом на улице
+CALLS_SINGLE_INVESTIGATE_FIREARM_INSIDE	NYC_911	INVESTIGATE/POSSIBLE CRIME: FIREARM/INSIDE	🔫	Firearms 911	Person with firearm inside	Оружие 911	Человек с пистолетом внутри
+CALLS_SINGLE_DISPUTE_FIREARM_INSIDE	NYC_911	DISPUTE: FIREARM/INSIDE	🔫	Firearms 911	Dispute with firearm inside	Оружие 911	Ссора с огнестрелом внутри
+CALLS_SINGLE_ASSAULT_INSIDE_PAST	NYC_911	ASSAULT (PAST): OTHER/INSIDE	🔪	Aggression 911	Assault inside (past)	Агрессия 911	Насилие внутри (постфактум)
+CALLS_SINGLE_ASSAULT_KNIFE_INSIDE_PROG	NYC_911	ASSAULT (IN PROGRESS): KNIFE/INSIDE	🔪	Aggression 911	Assault with knife inside (in progress)	Агрессия 911	Нападение с ножом внутри (в процессе)
+CALLS_SINGLE_ALARM_BANK_BURGLARY	NYC_911	ALARMS: BANK/BURGLARY	🚨	Alarms 911	Bank burglary / alarm	Сигнализация 911	Взлом банка / Сигнализация
+CALLS_SINGLE_SECURITY_HOLDING_SUSPECT	NYC_911	PO/SECURITY HOLDING SUSPECT: CIV CLOTHES/INSIDE	👮	Arrest 911	Security holding suspect	Задержание 911	Охрана удерживает подозреваемого
+CALLS_SINGLE_DISPUTE_TRANSIT	NYC_911	DISPUTE: TRANSIT	🤬	Conflicts 911	Dispute in subway/transit	Конфликты 911	Ссора в метро/транспорте
+CALLS_SINGLE_DISPUTE_INSIDE	NYC_911	DISPUTE: INSIDE	🤬	Conflicts 911	Dispute inside	Конфликты 911	Ссора в помещении
+CALLS_SINGLE_MVA_INJURY_HWY	NYC_911	VEHICLE ACCIDENT: INJURY/LTD ACC HWY	🚗	Traffic 911	Highway accident with injury	ДТП 911	Авария с травмами на трассе
+CALLS_SINGLE_FIRE_VEHICLE	NYC_911	FIRE: VEHICLE	🔥	Fire 911	Vehicle fire	Пожар 911	Возгорание автомобиля
+EMS_SINGLE_CHOKE	NYC_EMS	CHOKE	🫁	Respiratory	Choking	Дыхание	Удушье / Удушение
+EMS_SINGLE_INJURY	NYC_EMS	INJURY	🩹	Trauma	General injury	Травмы	Обычная травма
+EMS_SINGLE_OTHER	NYC_EMS	OTHER	❓	Misc	Unclassified call (EMS)	Прочее	Неклассифицированный вызов (EMS)
+CALLS_SINGLE_INVESTIGATE_KNIFE_OUTSIDE	NYC_911	INVESTIGATE/POSSIBLE CRIME: KNIFE/OUTSIDE	🔪	Weapons 911	Knife outside (investigation / possible crime)	Оружие 911	Нож на улице (проверка / возможное преступление)
+EMS_SINGLE_MEDRXN	NYC_EMS	MEDRXN	💊	Medications	Medication reaction	Лекарства	Реакция на медикаменты
+CALLS_SINGLE_DISPUTE_FIREARM_OUTSIDE	NYC_911	DISPUTE: FIREARM/OUTSIDE	🔫	Firearms 911	Dispute with firearm outside	Оружие 911	Ссора с огнестрелом на улице
+EMS_SINGLE_SICPED	NYC_EMS	SICPED	🧒	Pediatrics	Sick pediatric	Педиатрия	Больной ребенок
+CALLS_SINGLE_AMBULANCE_INJURY_INSIDE	NYC_911	AMBULANCE CASE: INJURY/INSIDE	🩹	Trauma 911	Injury inside	Травмы 911	Травма в помещении
+CALLS_SINGLE_SEE_COMPLAINANT_OTHER_OUTSIDE	NYC_911	SEE COMPLAINANT: OTHER/OUTSIDE	🗣️	Complainant 911	Contact complainant outside (clarification / inactive scene)	Заявитель 911	Связаться с заявителем на улице (уточнение / не активная сцена)
+CALLS_SINGLE_ALARM_COMMERCIAL_HOLDUP	NYC_911	ALARMS: COMMERCIAL/HOLDUP	🚨	Alarms 911	Commercial hold-up alarm	Сигнализация 911	Тревожная кнопка / hold-up в коммерческом объекте
+CALLS_SINGLE_UTILITY_TROUBLE	NYC_911	UTILITY TROUBLE (SPECIFY)	⚙️	Infrastructure 911	Utility / engineering network trouble	Инфраструктура 911	Проблема с коммунальной / инженерной сетью
+CALLS_SINGLE_BURGLARY_RESIDENCE_PAST	NYC_911	BURGLARY (PAST): RESIDENCE	🥷	Burglary 911	Residential burglary (past)	Взлом 911	Взлом квартиры (постфактум)
+CALLS_SINGLE_MVA_PROPERTY_ONLY_HWY	NYC_911	VEHICLE ACCIDENT: PROPERTY ONLY/LTD ACC HWY	🚗	Traffic 911	Highway accident (no injuries)	ДТП 911	Авария без пострадавших на трассе
+CALLS_SINGLE_AMBULANCE_INJURY_OUTSIDE	NYC_911	AMBULANCE CASE: INJURY/OUTSIDE	🩹	Trauma 911	Injury outside	Травмы 911	Травма на улице
+CALLS_SINGLE_FIRE_EXPLOSION	NYC_911	FIRE: EXPLOSION	🔥	Fire 911	Explosion / fire explosion	Пожар 911	Взрыв / взрыв с возгоранием
+CALLS_SINGLE_DISORDERLY_GROUP_INSIDE	NYC_911	DISORDERLY: GROUP/INSIDE	🍻	Disorderly 911	Disorderly group inside	Беспорядки 911	Толпа нарушителей в помещении
+CALLS_SINGLE_INVESTIGATE_HELP_TRANSIT	NYC_911	INVESTIGATE/POSSIBLE CRIME: CALLS FOR HELP/TRANSIT	🕵️	Investigation 911	Calls for help in subway/transit (investigation)	Расследование 911	Крики о помощи в метро/транспорте (проверка)
+CALLS_SINGLE_TRESPASS_INSIDE_PROG	NYC_911	OTHER CRIMES (IN PROGRESS): TRESPASS/INSIDE	🚨	Crimes 911	Trespassing inside (in progress)	Преступления 911	Незаконное проникновение внутрь (в процессе)
+EMS_SINGLE_INJMIN	NYC_EMS	INJMIN	🩹	Trauma	Minor injury	Травмы	Незначительная травма
+CALLS_SINGLE_DISPUTE_ORDER_PROTECT_INSIDE	NYC_911	DISPUTE: VIOL ORDER PROTECT/INSIDE	⚖️	Legal 911	Violation of protection order inside	Защитный ордер 911	Нарушение защитного ордера внутри
+CALLS_SINGLE_AMBULANCE_RESCUE_INSIDE	NYC_911	AMBULANCE CASE: RESCUE/INSIDE	🚑	Ambulance 911	Rescue / evacuation from inside	Скорая 911	Спасение / эвакуация из помещения
+CALLS_SINGLE_DISPUTE_KNIFE_FAMILY	NYC_911	DISPUTE: KNIFE/FAMILY	🤬	Conflicts 911	Family dispute with knife	Конфликты 911	Семейная ссора с ножом
+CALLS_SINGLE_AMBULANCE_UNCONSCIOUS_OUTSIDE	NYC_911	AMBULANCE CASE: UNCONSCIOUS/OUTSIDE	😵	Unconscious 911	Unconscious person outside	Потеря сознания 911	Человек без сознания на улице
+EMS_SINGLE_BURNMA	NYC_EMS	BURNMA	🔥	Burns	Major burn	Ожоги	Сильный ожог
+EMS_SINGLE_ASTHMA	NYC_EMS	ASTHMA	🫁	Respiratory	Asthma attack	Дыхание	Приступ астмы
+EMS_SINGLE_SICMIN	NYC_EMS	SICMIN	🤒	Misc	Minor illness	Прочее	Легкое недомогание
+EMS_SINGLE_SICK	NYC_EMS	SICK	🤒	Misc	Sick (general)	Прочее	Болен (общий код)
+EMS_SINGLE_TRAUMA	NYC_EMS	TRAUMA	🩹	Trauma	Major trauma	Травмы	Травма (тяжелая)
+CALLS_SINGLE_ROBBERY_OTHER_OUTSIDE_PAST	NYC_911	ROBBERY (PAST): OTHER/OUTSIDE	🥷	Robbery 911	Street robbery (past)	Ограбление 911	Уличное ограбление (постфактум)
+CALLS_SINGLE_DISPUTE_OUTSIDE	NYC_911	DISPUTE: OUTSIDE	🤬	Conflicts 911	Dispute / conflict outside	Конфликты 911	Ссора / конфликт на улице
+CALLS_SINGLE_LARCENY_VEHICLE_OUTSIDE_PROG	NYC_911	LARCENY (IN PROGRESS): VEHICLE/OUTSIDE	🚗	Vehicle Theft 911	Vehicle larceny or theft from auto outside (in progress)	Угон / Кража 911	Кража авто или из авто на улице (в процессе)
+CALLS_SINGLE_ALARM_AUDIBLE_TRANSIT	NYC_911	ALARMS: AUDIBLE/TRANSIT	🚨	Alarms 911	Audible alarm in subway/transit	Сигнализация 911	Звуковая сигнализация в метро/транспорте
+CALLS_SINGLE_ASSAULT_FAMILY_PAST	NYC_911	ASSAULT (PAST): OTHER/FAMILY	🔪	Aggression 911	Domestic violence (past)	Агрессия 911	Насилие в семье (постфактум)
+CALLS_SINGLE_TRANSIT_PATROL_NON_TRANSIT	NYC_911	TRANSIT PATROL/INSPECTION BY NON-TRANSIT BUREAU PERSONNEL	👮	Patrol 911	Transit station inspection by non-transit bureau officers (preventive)	Патруль 911	Инспекция станций метро сотрудниками не-транспортного бюро (превентивно)
+CALLS_SINGLE_AMBULANCE_EDP_HWY	NYC_911	AMBULANCE CASE: EDP/LTD ACC HWY	🧠	Psychiatry 911	EDP (Psychiatry) on highway	Психиатрия 911	EDP (Психиатрия) на скоростной трассе
+CALLS_SINGLE_ROBBERY_INSIDE_PROG	NYC_911	ROBBERY (IN PROGRESS): OTHER/INSIDE	🥷	Robbery 911	Robbery inside (in progress)	Ограбление 911	Ограбление внутри помещения (в процессе)
+CALLS_SINGLE_MVA_PERSON_PINNED	NYC_911	VEHICLE ACCIDENT: PERSON PINNED	🚗	Traffic 911	MVA: Person pinned / trapped in vehicle (rescue)	ДТП 911	ДТП: Человек зажат / заблокирован в авто (Rescue)
+CALLS_SINGLE_INVESTIGATE_NARCO_TRANSIT	NYC_911	INVESTIGATE/POSSIBLE CRIME: NARCO SALES/TRANSIT	💊	Narcotics 911	Narcotics sales in subway/transit (investigation)	Наркотики 911	Продажа наркотиков в метро/транспорте (проверка)
+CALLS_SINGLE_INVESTIGATE_SERIOUS_HWY	NYC_911	INVESTIGATE/POSSIBLE CRIME: SERIOUS OTHER/LTD ACC HWY	🕵️	Investigation 911	Serious incident on highway (investigation)	Расследование 911	Серьезный инцидент на трассе (проверка)
+CALLS_SINGLE_LARCENY_INSIDE_PROG	NYC_911	LARCENY (IN PROGRESS): OTHER/INSIDE	🕵️	Larceny 911	Larceny inside (in progress)	Кража 911	Кража внутри помещения (в процессе)
+CALLS_SINGLE_LARCENY_OUTSIDE_PROG	NYC_911	LARCENY (IN PROGRESS): OTHER/OUTSIDE	🕵️	Larceny 911	Larceny outside (in progress)	Кража 911	Кража на улице (в процессе)
+CALLS_SINGLE_INVESTIGATE_SHOTS_OUTSIDE	NYC_911	INVESTIGATE/POSSIBLE CRIME: SHOTS FIRED/OUTSIDE	🔫	Firearms 911	Shots fired outside (investigation / possible crime)	Оружие 911	Выстрелы на улице (проверка / возможное преступление)
+CALLS_SINGLE_ASSIST_PO_UNIFORM_OUTSIDE	NYC_911	ASSIST POLICE OFFICER: UNIFORM/OUTSIDE	👮	Police Assist 911	Request for assist to uniformed officer outside	Помощь 911	Запрос помощи патрульному в форме на улице
+CALLS_SINGLE_VISIBILITY_PATROL_FAMILY_VISIT	NYC_911	VISIBILITY PATROL: FAMILY/HOME VISIT	👮	Patrol 911	Visibility patrol: home / family visit (preventive)	Патруль 911	Видимое патрулирование: проверка на дому / семейный визит (превентивно)
+CALLS_SINGLE_TRESPASS_OUTSIDE_PROG	NYC_911	OTHER CRIMES (IN PROGRESS): TRESPASS/OUTSIDE	🚨	Crimes 911	Trespassing on property (in progress)	Преступления 911	Незаконное проникновение (Trespass) на территорию (в процессе)
+CALLS_SINGLE_ASSAULT_WEAPON_OUTSIDE_PROG	NYC_911	ASSAULT (IN PROGRESS): WEAPON/OUTSIDE	🔪	Aggression 911	Assault with weapon outside (in progress)	Агрессия 911	Нападение с оружием на улице (в процессе)
+CALLS_SINGLE_FIRE_RESIDENCE_PRIVATE	NYC_911	FIRE: RESIDENCE PRIVATE HOUSE	🔥	Fire 911	Fire in private residence	Пожар 911	Пожар в частном жилом доме
+CALLS_SINGLE_AMBULANCE_HEAVY_BLEEDING_INSIDE	NYC_911	AMBULANCE CASE: HEAVY BLEEDING/INSIDE	🩸	Bleeding 911	Heavy bleeding inside	Кровотечение 911	Сильное кровотечение внутри помещения
+CALLS_SINGLE_CRIMINAL_MISCHIEF_INSIDE_PROG	NYC_911	OTHER CRIMES (IN PROGRESS): CRIM MISCHIEF/INSIDE	🚨	Crimes 911	Vandalism / criminal mischief inside (in progress)	Преступления 911	Вандализм / порча имущества (Criminal Mischief) внутри (в процессе)
