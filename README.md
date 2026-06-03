@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10.11](https://img.shields.io/badge/python-3.10.11-blue.svg)](https://www.python.org/)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20518661.svg)](https://doi.org/10.5281/zenodo.20518661)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20518660.svg)](https://doi.org/10.5281/zenodo.20518660)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0006--1974--7894-A6CE39?logo=orcid&logoColor=white)](https://orcid.org/0009-0006-1974-7894)
 
 ---
@@ -42,7 +42,7 @@ If you use this code, data, or findings, please cite both:
 > Tysiatskii, A. (2026). *Seleno-Gravitational Rhythm (SGR): Impulsive lunar
 > tidal waves as a modulator of human consciousness, behavior, and somatic
 > health. Cross-city meta-analysis of US metropolitan crime and medical
-> statistics (2001–2025).* Zenodo. https://doi.org/10.5281/zenodo.20518661
+> statistics (2001–2025).* Zenodo. https://doi.org/10.5281/zenodo.20518660
 
 BibTeX and a machine-readable citation are provided in [`CITATION.cff`](CITATION.cff).
 
