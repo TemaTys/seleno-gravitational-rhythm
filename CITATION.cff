@@ -1,11 +1,12 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
-  - family-names: "Tysiatskii"
-    given-names: "Artem"
+  - family-names: Tysiatskii
+    given-names: Artem
     orcid: "https://orcid.org/0009-0006-1974-7894"
 title: "Seleno-Gravitational Rhythm (SGR): Research code, data pipeline and meta-analysis of lunar tidal jerk effects on human behavior and health"
-version: "1.0.1"
-doi: 10.5281/zenodo.20518661
-date-released: "2026-06-03"
-url: "https://github.com/TemaTys/seleno-gravitational-rhythm"
+version: 1.0.1
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.20518661
+date-released: 2026-06-03
