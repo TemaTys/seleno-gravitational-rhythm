@@ -1,12 +1,51 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
-authors:
-  - family-names: Tysiatskii
-    given-names: Artem
-    orcid: "https://orcid.org/0009-0006-1974-7894"
+message: "If you use this software or data, please cite both the software (this file) and the accompanying Zenodo archive."
 title: "Seleno-Gravitational Rhythm (SGR): Research code, data pipeline and meta-analysis of lunar tidal jerk effects on human behavior and health"
-version: 1.0.1
+abstract: "Open Python pipeline and cross-city meta-analysis of impulsive lunar tidal waves (second derivative of the tidal potential) as a modulator of human consciousness, behavior and somatic health, based on >106 million records from seven public US municipal databases (2001-2025)."
+type: software
+authors:
+  - family-names: "Tysiatskii"
+    given-names: "Artem"
+    orcid: "https://orcid.org/0009-0006-1974-7894"
+    email: "artem.tysiatskii@gmail.com"
+    affiliation: "Independent researcher"
+version: "1.0.1"
+date-released: "2026-06-03"
+url: "https://github.com/TemaTys/seleno-gravitational-rhythm"
+repository-code: "https://github.com/TemaTys/seleno-gravitational-rhythm"
+license: "MIT"
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.20518661
-date-released: 2026-06-03
+    value: 10.5281/zenodo.20518660
+    description: "Concept DOI representing all versions of this software"
+keywords:
+  - seleno-gravitational rhythm
+  - SGR
+  - data engineering
+  - data pipeline
+  - lunar tidal jerk
+  - ddF detector
+  - gravitational biology
+  - chronobiology
+  - PIEZO1
+  - mechanotransduction
+  - circadian regulation
+  - HPA axis
+  - human behavior
+  - consciousness
+  - somatic health
+  - epidemiology
+  - meta-analysis
+  - HKSJ
+  - open data
+  - Python
+preferred-citation:
+  type: article
+  title: "Seleno-Gravitational Rhythm (SGR): Impulsive lunar tidal waves as a modulator of human consciousness, behavior, and somatic health. Cross-city meta-analysis of US metropolitan crime and medical statistics (2001-2025)"
+  authors:
+    - family-names: "Tysiatskii"
+      given-names: "Artem"
+      orcid: "https://orcid.org/0009-0006-1974-7894"
+  year: 2026
+  doi: 10.5281/zenodo.20518660
+  url: "https://doi.org/10.5281/zenodo.20518660"
