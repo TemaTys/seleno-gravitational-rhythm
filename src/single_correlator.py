@@ -58,13 +58,19 @@ Methodology
 6) Internal robustness battery (lag = 0 and lag = WIN3):
        • Block-permutation tests, block lengths 14 and 28 days
        • Circular-shift permutation (≥ 7-day shift)
-       • Bootstrap 95% CI for Hedges' g (2.5/97.5 percentiles)
+       • Bootstrap 95% CI for Hedges' g
+         (i.i.d. day resampling; may be mildly anticonservative under
+         residual autocorrelation and should be interpreted as descriptive
+         uncertainty, whereas permutation p-values provide the
+         autocorrelation-robust inferential check)
        • Slice stability over 5 contiguous time slices
        • Placebo resampling: random control subsets of size n_target
        • Quasi-Poisson GLM sanity check on raw counts
 
-7) Multiple-testing control: Benjamini-Hochberg FDR within each
-   (epoch, trigger_family, lag) stratum across crime types of one database.
+7) Multiple-testing: Benjamini-Hochberg FDR is COMPUTED and REPORTED per
+   (epoch, family, lag) stratum, but tiers are assigned on raw p_mw — this
+   is the exploratory/characterization layer; confirmatory control lives in
+   the cross-city meta-analysis.
 
 8) Strict gatekeeping:
        • mean(raw counts) ≥ 8/day

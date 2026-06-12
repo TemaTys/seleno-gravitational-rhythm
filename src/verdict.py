@@ -22,7 +22,13 @@ Methodology
 • Hartung-Knapp-Sidik-Jonkman (HKSJ) variance adjustment — current standard
   for small-k meta-analysis (k ≤ 10 cohorts). Prevents anti-conservative
   standard errors under non-trivial between-study heterogeneity.
-• 95% CI from Student's t (df = k − 1).
+• Family-level meta is TWO-STAGE: crime-type effects are first pooled WITHIN
+  each city (fixed-effect inverse-variance), then combined ACROSS cities by a
+  random-effects HKSJ meta. This makes the city the unit of replication and
+  sets df = n_cities − 1 (avoids pseudoreplication from correlated crime-type
+  series within a city). The crime-type table is single-level (one series per
+  city) and needs no such correction.
+• 95% CI from Student's t (df = k − 1, k = n_cities for the family meta).
 • Heterogeneity: Cochran's Q, its p-value, and I² (Higgins & Thompson, 2002).
 
 Publication tiers (only PRE / PRE2014 epochs, primary triggers):
@@ -257,6 +263,37 @@ def hksj_meta(y: np.ndarray, v: np.ndarray) -> dict | None:
         "Q": Q, "p_Q": p_Q, "I2": I2,
     }
 
+def two_stage_city_meta(grp: pd.DataFrame) -> dict | None:
+    """
+    Two-stage meta that respects the clustered structure (crime_type WITHIN city).
+
+    The flat approach (one row per city x crime_type) treats correlated series
+    as independent units -> pseudoreplication -> inflated df (k_total-1) and an
+    anti-conservative CI. Here:
+
+      Stage 1: within each city, pool its crime-type effects via fixed-effect
+               inverse-variance -> ONE effect size per city.
+      Stage 2: random-effects HKSJ meta ACROSS cities
+               -> k = number of cities, df = n_cities - 1.
+
+    df is now driven by the count of independent clusters (cities), which is the
+    honest unit of replication for a cross-city claim.
+    """
+    city_y, city_v = [], []
+    for _, cg in grp.groupby("city"):
+        g = cg["g"].values.astype(float)
+        v = cg["var_g"].values.astype(float)
+        m = np.isfinite(g) & np.isfinite(v) & (v > 0)
+        g, v = g[m], v[m]
+        if len(g) == 0:
+            continue
+        w = 1.0 / v
+        city_y.append(float((w * g).sum() / w.sum()))
+        city_v.append(float(1.0 / w.sum()))
+    if len(city_y) < 2:
+        return None
+    return hksj_meta(np.array(city_y), np.array(city_v))
+    
 # ════════════════════════════════════════════════════════════════════════
 # DATA LOADERS
 # ════════════════════════════════════════════════════════════════════════
@@ -325,13 +362,13 @@ def main():
 
     rows, forest = [], []
     for (family, trigger, epoch, lag), grp in df_fam.groupby(["family", "trigger", "epoch", "lag"]):
-        meta = hksj_meta(grp["g"].values, grp["var_g"].values)
+        meta = two_stage_city_meta(grp)
         if meta is None:
             continue
 
         is_pre     = epoch in ["PRE", "PRE2014"]
         is_primary = trigger in PRIMARY_TRIGGERS
-        k_cities   = int(grp["city"].nunique())
+        k_cities   = int(meta["k"])   # cities = clusters; df = k_cities - 1 (two-stage)
 
         if is_pre and is_primary:
             tier, notes = assign_tier(meta, k_cities)
@@ -351,7 +388,7 @@ def main():
             "family": family, "trigger": trigger, "lag": lag,
             "trigger_family_class": grp["trigger_family"].iloc[0],
             "epoch": epoch, "is_primary": bool(is_primary),
-            "k_total": meta["k"], "k_cities": k_cities,
+            "k_meta": meta["k"], "k_cities": k_cities,
             "g_meta": meta["g_meta"], "ci_lo": meta["ci_lo"], "ci_hi": meta["ci_hi"],
             "se_hk": meta["se_hk"], "p_meta": meta["p_meta"],
             "tau2": meta["tau2"], "Q": meta["Q"], "p_Q": meta["p_Q"], "I2": meta["I2"],
@@ -441,7 +478,7 @@ def print_summary(out_fam: pd.DataFrame):
             print(f"{GREEN}  {r['family']:<20} {r['epoch']:<7} {r['trigger']:<22} {lag_val:>5}  "
                   f"{_fmt(r['g_meta']):>8}  {ci_str:>20}  "
                   f"{r['p_meta']:>10.2e}  {r['I2']:>4.0f}%  "
-                  f"{int(r['k_total'])}({int(r['k_cities'])}c){RESET}")
+                  f"{int(r['k_cities'])}c{RESET}")
             if "city_details" in r and pd.notna(r["city_details"]):
                 print(f"{GRAY}      ↳ Contributions: {r['city_details']}{RESET}")
 

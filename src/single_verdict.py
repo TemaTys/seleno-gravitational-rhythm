@@ -25,6 +25,9 @@ correlator, the verdict aggregates four complementary robustness criteria:
                           28 days + circular-shift permutation. The pass
                           count {0..3} measures resistance to autocorrelation
                           and seasonal alignment artefacts.
+                          Block permutations (14/28 d) are the primary
+                          autocorrelation-robust checks; circular-shift
+                          permutation is a secondary alignment diagnostic.
   • Stability           : slice sign-fraction over 5 contiguous time slices
                           (rejects accidental concentration in one era).
   • Placebo control     : empirical p-value from random subsets of the
@@ -188,6 +191,9 @@ def assign_tier(r: pd.Series, is_primary: bool, is_target_epoch: bool) -> tuple[
 
     if not (is_primary and is_target_epoch):
         return "N/A", "Secondary trigger or non-target epoch"
+        
+    if pd.isna(r.get("slice_sign_frac")):
+        return "N/A", "Lag-profile diagnostic (robustness battery not computed)"
 
     if sf < 0.4:
         return "DISCARDED_UNSTABLE", f"Slice sign-frac {sf:.2f} < 0.40"
@@ -261,6 +267,7 @@ def main():
             "ci_hi":                r.get("g_hi", np.nan),
             "p_mw":                 r.get("p_mw",     np.nan),
             "p_mw_fdr":             r.get("p_mw_fdr", np.nan),
+            "fdr_pass":             bool(pd.notna(r.get("p_mw_fdr")) and float(r.get("p_mw_fdr")) < 0.05),
             "delta_pct":            r.get("delta_pct", np.nan),
             "slice_sign_frac":      r.get("slice_sign_frac", np.nan),
             "perm_pass_count":      perm_pass,
@@ -299,6 +306,7 @@ def print_summary(df: pd.DataFrame):
     print("\n" + "═" * 140)
     print("SINGLE-DATABASE VERDICT  —  PRE & PRE2014 epochs, PRIMARY triggers only")
     print("═" * 140)
+    print("Note: WIN3 is the primary timing-robust headline lag; PRE2014 is a nested sensitivity subset of PRE, not an independent cohort.")
 
     sub = df[df["epoch"].isin(["PRE", "PRE2014"]) & df["is_primary"]].copy()
     if sub.empty:

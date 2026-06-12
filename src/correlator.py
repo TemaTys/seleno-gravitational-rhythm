@@ -61,7 +61,7 @@ Methodology
        • n_target ≥ 15 exposed days, n_ctrl ≥ 60 control days
 
 Epochs (independent per city):
-       PRE2014  — pre-2015 (replication cohort, pre-decrim era in several US cities)
+       PRE2014  — pre-2015 (nested sub-cohort (subset of PRE, NOT an independent replication), pre-decrim era in several US cities)
        PRE      — full pre-COVID timeline
        POST     — post-COVID timeline
        COVID    — optional, off by default (extreme regime shift)
@@ -285,11 +285,24 @@ def build_ctrl_mask(df_e: pd.DataFrame, family: str) -> np.ndarray:
     """
     Dynamic control mask by trigger family.
 
-    PHASE: exclude any day within ±1 d of ANY moon phase from controls
-           (Branch A residuals still carry phase variance — must hold out).
-    WAVE : Branch B residuals already have the phase mean removed;
-           the only requirement is that controls are not target days,
-           which is enforced downstream via `~t_mask`.
+    PHASE (Branch A): Branch-A residuals still carry the FULL lunar variance,
+        so the control pool MUST hold out every day within +/-1 d of any moon
+        phase — otherwise the signal under test would leak into the baseline
+        and the contrast would be meaningless.
+
+    WAVE (Branch B): Branch-B residuals already have the static phase means
+        (Full/New/First/Last x {-1,0,+1}) partialled out by the OLS design.
+        The control pool is therefore the full set of non-target days
+        (enforced downstream via `~t_mask`). It may still contain OTHER wave
+        types (e.g. quadrature waves while testing syzygy waves). This is a
+        DELIBERATE, conservative choice: (a) those days carry only the small
+        residual impulsive component, not the static phase mean, so any
+        contamination is minor; (b) including them dilutes the baseline toward
+        the grand mean, which biases the estimated WAVE effect TOWARD zero.
+        Reported WAVE_* effects are therefore lower bounds. We do NOT excise all
+        wave days from the baseline because the scientific contrast of interest
+        is "this specific wave trigger vs. a typical day", not "vs. an
+        artificially quiet day".
     """
     if family == "PHASE":
         phase_any = np.zeros(len(df_e), dtype=bool)
