@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10.11](https://img.shields.io/badge/python-3.10.11-blue.svg)](https://www.python.org/)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20518660-blue.svg)](https://doi.org/10.5281/zenodo.20518660)
+[![Version](https://img.shields.io/badge/version-1.1.0-green.svg)](https://github.com/TemaTys/seleno-gravitational-rhythm/releases)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0006--1974--7894-A6CE39?logo=orcid&logoColor=white)](https://orcid.org/0009-0006-1974-7894)
 
 ---
@@ -28,10 +29,13 @@ The work introduces:
 - an internal **robustness battery** (block-permutation, circular-shift,
   bootstrap, slice stability, placebo) for unique single-city databases.
 
-Key empirical findings — a TIER1 cross-city replication for property crime
-in the pre-quadrature wave window, and a structural sizygy/quadrature
-dichotomy across cardiovascular, obstetric, and psychiatric outcomes — are
-detailed in the accompanying article (see *How to cite*).
+Key empirical findings — five converging TIER3 cross-city signals for
+property-related crime in pre-quadrature wave windows (*I*² = 0% across
+all five cities, replicated in two independent epochs and confirmed in
+pure subsamples), 14 TIER1 and 17 TIER2 single-database findings with a
+full robustness battery, and a structural syzygy/quadrature dichotomy
+across cardiovascular, behavioral, and obstetric outcomes — are detailed
+in the accompanying article (see *How to cite*).
 
 ---
 
@@ -133,7 +137,7 @@ Total runtime on a modern laptop: ~30–60 min depending on raw-data size.
 - `outputs/verdicts/sgr_forest_data.csv` — data for the headline forest plot
 - `outputs/verdicts/sgr_single_verdict_signals.csv` — TIER1/2/3 single-DB signals
 - `figures/figure_1_ddF_schema.png` — ddF detector schema
-- `figures/figure_2_forest.png` — headline forest plot (PROPERTY_CRIME × WAVE_before_quadrature)
+- `figures/figure_2_forest.png` — headline forest plot (PROPERTY_CRIME × WAVE_before_quadrature, cross-city meta, *I*² = 0%)
 - `figures/figure_3_cycle_map.png` — lunar-cycle signal map
 
 ---
@@ -152,8 +156,10 @@ static phase contrasts) and **Branch B** (with 12 static-phase dummies
 partialled out — for wave-only effects). Effect sizes (Hedges' *g* with
 small-sample correction) and a non-parametric Mann–Whitney backstop are
 computed per (city × epoch × crime × trigger × lag), with BH-FDR within
-strata. Cross-city aggregation uses **random-effects meta-analysis with
-HKSJ correction** (the modern standard for small *k*). Single-database
+strata. Cross-city aggregation uses a **two-stage random-effects meta-analysis
+with HKSJ correction** (the modern standard for small *k*): within-city
+fixed-effects pooling first, then between-city HKSJ aggregation with
+*df* = *k* − 1, making the city the unit of replication. Single-database
 signals additionally pass a robustness battery (block-permutation,
 circular-shift, bootstrap, slice stability, placebo).
 
