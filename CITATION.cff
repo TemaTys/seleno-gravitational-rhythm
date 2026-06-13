@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software or data, please cite both the software (this file) and the accompanying Zenodo archive."
 title: "Seleno-Gravitational Rhythm (SGR): Research code, data pipeline and meta-analysis of lunar tidal jerk effects on human behavior and health"
-abstract: "Open Python pipeline and cross-city meta-analysis of impulsive lunar tidal waves (second derivative of the tidal potential) as a modulator of human consciousness, behavior and somatic health, based on >106 million records from seven public US municipal databases (2001-2025)."
+abstract: "Open Python pipeline and two-stage cross-city meta-analysis of impulsive lunar tidal waves (second derivative of the tidal potential, d²F/dt²) as a modulator of human behavior and somatic health. Five converging cross-city signals (TIER3, I²=0%, k=5 cities) for property crime in pre-quadrature wave windows, plus 14 TIER1 and 17 TIER2 single-database findings, based on >106 million records from seven public US municipal databases (2001-2025)."
 type: software
 authors:
   - family-names: "Tysiatskii"
@@ -9,8 +9,8 @@ authors:
     orcid: "https://orcid.org/0009-0006-1974-7894"
     email: "artem.tysiatskii@gmail.com"
     affiliation: "Independent researcher"
-version: "1.0.1"
-date-released: "2026-06-03"
+version: "1.1.0"
+date-released: "2026-06-13"
 url: "https://github.com/TemaTys/seleno-gravitational-rhythm"
 repository-code: "https://github.com/TemaTys/seleno-gravitational-rhythm"
 license: "MIT"
@@ -48,4 +48,5 @@ preferred-citation:
       orcid: "https://orcid.org/0009-0006-1974-7894"
   year: 2026
   doi: 10.5281/zenodo.20518660
+  note: "Version 1.1.0 — corrected meta-analysis (two-stage HKSJ, city as replication unit)"
   url: "https://doi.org/10.5281/zenodo.20518660"
